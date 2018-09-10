@@ -38,6 +38,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  /* Adding flexbox */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 #footer {
   background-color: #444;
@@ -51,7 +55,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
-  height: 100%; // Changed nav from 80px
+  height: 100%;   /* Changed nav from 80px */
   background-color: #252831;
   text-align:center;
 }
@@ -131,18 +135,19 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Listing ====================== */
-/* Credit for changes to restaurants-list, restaurants-list li: walkthrough by Matt Cranford
-   Source: https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-2-responsiveness/
- */
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  /* Credit for changes to restaurants-list, restaurants-list li: webinar with Doug Brown
+   Source: https://youtu.be/92dtrNU1GQc
+ */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -160,7 +165,7 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  /* min-height: 248px; */
   min-width: 100%;
 }
 #restaurants-list li h1 {
@@ -213,7 +218,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 100%; // changed from 50%
+  width: 100%;    /* Changed from 50% */
 }
 #restaurant-name {
   color: #f18200;
@@ -247,7 +252,7 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 0 30px; // changed from 140px 40px 30px
+  padding: 140px 0 30px;    /* Changed from 140px 40px 30px */
   width: 50%;
 }
 #reviews-container {
@@ -263,9 +268,11 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
-  display: flex;  // Similar to restaurants-list above, adding flexbox
-  flex-direction: column;
-  align-items: center;
+  /* Similar to restaurants-list above, adding flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #reviews-list li {
   background-color: #fff;
