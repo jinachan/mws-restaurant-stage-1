@@ -170,7 +170,7 @@ nav h1 a {
   font-size: 11pt;
 }
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #b75205;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
